@@ -61,18 +61,13 @@ describe('formatNumber()', () => {
   });
 
   it('returns value as string for style "none"', () => {
-    const actual = formatNumber(1234.5678, { style: 'none' });
+    const actual = formatNumber(1234.5678, 'none');
     expect(actual).equal('1234.5678');
   });
 
   it('formats number with integer default', () => {
-    const actual = formatNumber(1234.5678, { style: 'integer' });
+    const actual = formatNumber(1234.5678, 'integer');
     expect(actual).equal('1,235');
-  });
-
-  it('formats number with integer fr', () => {
-    const actual = formatNumber(1234.5678, { style: 'integer', locales: 'fr' });
-    expect(actual).equal('1 235');
   });
 
   it('formats number with default fraction digits', () => {
